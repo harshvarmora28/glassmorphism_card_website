@@ -1,0 +1,310 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@400;500;600&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow: hidden;
+}
+#title{
+    position: absolute;
+    top: 20px;
+    color: #fff;
+    font-size: 28px;
+}
+#sub_title{
+    position: absolute;
+    top: 60px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1c1c25;
+}
+section::before{
+    content: "";
+    position: absolute;
+    bottom: -40%;
+    left: 40%;
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(#f00, #f0f);
+    border-radius: 50%;
+}
+.card{
+    position: relative;
+    width: 508px;
+    height: 314px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    cursor: pointer;
+}
+.card .face{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    transform-style: preserve-3d;
+    transition: 1.2s;
+    backface-visibility: hidden;
+}
+.card .front.face::before{
+    content: "";
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+.card .front.face::after{
+    content: "";
+    position: absolute;
+    bottom: 40px;
+    right: 80px;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+#chip{
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    max-width: 64px;
+}
+.debit_heading{
+    position: absolute;
+    left: 40px;
+    top: 30px;
+    color: #fff;
+    font-weight: 500;
+
+}
+.bank_name{
+    position: absolute;
+    right: 40px;
+    top: 25px;
+    color: #fff;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 24px;
+}
+.card_num{
+    position: absolute;
+    bottom: 130px;
+    left: 40px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 6px;
+    font-size: 18px;
+    text-shadow: 0px 2px 1px #0005;
+    font-family: 'Orbitron', sans-serif;
+}
+.valid_thru{
+    position: absolute;
+    bottom: 90px;
+    left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1em;
+    text-align: right;
+}
+.valid_thru span:last-child{
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.card_holder{
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.blackbar{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+}
+.cvv_text{
+    position: absolute;
+    top: 120px;
+    left: 30px;
+}
+.cvv_text h5{
+    color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.whiteBar{
+    position: absolute;
+    width: 400px;
+    height: 40px;
+    background-color: #fff;
+    margin-top: 5px;
+}
+.cvv_num{
+    position: relative;
+    background-color: #ccc;
+    columns: #111;
+    width: 50px;
+    height: 30px;
+    font-weight: 30px;
+    letter-spacing: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    left: 395px;
+}
+.para{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    color: #fff;
+    font-size: 10px;
+    line-height: 1.4em;
+    font-weight: 300;
+}
+.card:hover .face.front{
+    transform: rotateY(180deg);
+}
+.card .face.back{
+    transform: rotateY(180deg);
+}
+.card:hover .face.back{
+    transform: rotateY(360deg);
+}
+
+/* Responsive */
+@media only screen and (max-width: 700px) {
+    .card{
+        width: 291px;
+        height: 180px;
+    }
+    /* 1.617834394904459 */
+    section::before{
+        bottom: 25%;
+        left: 40%;
+        width: 210px;
+        height: 210px;
+        
+    }
+    #chip{
+        top: 52px;
+        left: 25px;
+        max-width: 40px;
+    }
+    .debit_heading{
+        left: 20px;
+        top: 15px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 16px;
+    }
+    .bank_name{
+        right: 20px;
+        top: 12.5px;
+        font-size: 18px;
+    }
+    .card_num{
+        bottom: 65px;
+        left: 20px;
+        font-size: 11px;
+        letter-spacing: 4px;
+
+    }
+    .valid_thru{
+        bottom: 38px;
+        left: 20px;
+        line-height: 0.9em;
+        font-size: 10px;
+
+    }
+    .valid_thru span:last-child{
+        margin-left: 15px;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 2px;
+    }
+    .card_holder{
+        bottom: 14px;
+        left: 20px;
+        font-size: 12px;
+    }
+    .card .front.face::before{
+        bottom: 14px;
+        right: 20px;
+        width: 35px;
+        height: 35px;
+    }
+    .card .front.face::after{
+        bottom: 14px;
+        right: 40px;
+        width: 35px;
+        height: 35px;
+    }
+    .blackbar{
+        top: 20px;
+        height: 40px;
+    }
+    .cvv_text{
+        top: 70px;
+        left: 20px;
+    }
+    .cvv_text h5{
+        font-size: 8px;
+    }
+    .whiteBar{
+        width: 210px;
+        height: 28px;
+        margin-top: 6px;
+    }
+    .cvv_num{
+        width: 40px;
+        height: 20px;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        top: 10px;
+        left: 205px;
+    }
+    .para{
+        bottom: 18px;
+        left: 20px;
+        right: 20px;
+        font-size: 5px;
+        line-height: 1.0em;
+    }
+    
+}
