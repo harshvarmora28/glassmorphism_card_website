@@ -1,7 +1,7 @@
 
 # Debit Card Design (Glassmorphism)
 
-👉 https://hover-chat-by-harshcreations.netlify.app/
+👉 https://debit-card-design-byharshcreations.netlify.app/
 
 
 ## Authors
